@@ -1,2 +1,2 @@
 *.env
-pp_env/
+*.venv
