@@ -1,15 +1,17 @@
 import pandas as pd 
 import json
 from sqlalchemy import create_engine
-import sys
+from dotenv.main import load_dotenv
+import os
 
-user = sys.argv[1]
-password = sys.argv[2]
-host = sys.argv[3]
-port = sys.argv[4]
-dbname = sys.argv[5]
+load_dotenv()
+user = os.environ['DB_USER']
+password =os.environ['DB_PASSWORD']
+host = os.environ['DB_HOST']
+port = os.environ['DB_PORT']
+dbname = os.environ['DB_NAME']
+src_base_dir = os.environ['DIRECTORY']
 
-src_base_dir = "C:/Study/Data Eng/postgresPusher/DATA/retail_db"
 file_json = open(f"{src_base_dir}/schemas.json")
 schema = json.load(file_json)
 
