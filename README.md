@@ -9,13 +9,14 @@ The files are handled using 'pandas'
 
 In order to get the attributes for each CSV we have extracted the info from 'schemas.json' files in DATA directory
 
-In order to establish the connection we have used 'sys' to provide the mandatory info such as:
+In order to establish the connection we have connection variables set up in '.env' file to provide the mandatory info such as:
 * username    
 * host
 * port    
 * database name
 * password
+* directory path (where CSV has been stored)
 
-as user input
+
 
 NOTE: Data set has been copied from https://github.com/dgadiraju/retail_db.git repository
