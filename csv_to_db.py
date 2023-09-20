@@ -43,4 +43,5 @@ def to_db(ds_names  = None):
         df = csv_to_df(ds_name)
         df.to_sql(ds_name, con=engine, if_exists='replace') 
 
-to_db()
+if __name__ == "__main__":
+    to_db()
